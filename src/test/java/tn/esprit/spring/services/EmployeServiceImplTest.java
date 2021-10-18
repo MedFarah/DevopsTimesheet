@@ -59,6 +59,7 @@ public class EmployeServiceImplTest {
 		String email = "test@test.tn";
 		when(employeRepository.findById(employe.getId())).thenReturn(Optional.of(employe));
 		employeServiceImpl.mettreAjourEmailByEmployeId(email, employe.getId());
+		l.info("Logging test ... ");
 		assertEquals(email, employe.getEmail());
 	}
 
@@ -74,6 +75,7 @@ public class EmployeServiceImplTest {
 	public void testGetEmployePrenomById() {
 		String prenom = "Ben Test";
 		when(employeRepository.findById(employe.getId())).thenReturn(Optional.of(employe));
+		l.info("Logging test ... ");
 		assertEquals(prenom, employeServiceImpl.getEmployePrenomById(employe.getId()));
 	
 	}
@@ -88,6 +90,7 @@ public class EmployeServiceImplTest {
 	public void testDeleteContratById() {
 		when(contratRepoistory.findById(contrat.getReference())).thenReturn(Optional.of(contrat));
 		employeServiceImpl.deleteContratById(contrat.getReference());
+		l.info("Logging test ... ");
 		verify(contratRepoistory).delete(contrat);
 	}
 
