@@ -2,6 +2,10 @@ package tn.esprit.spring.services;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -39,7 +43,7 @@ public class EmployeServiceImplTest {
 	
 	@Before
     public void setUp() throws Exception {
-		contrat = new Contrat(); contrat.setReference(111);
+		contrat = new Contrat(); contrat.setReference(111);contrat.setSalaire(12332F);
 		employe = new Employe();
 		employe.setId(7);
 		employe.setNom("Test"); employe.setPrenom("Ben Test"); employe.setEmail("test@test.com");employe.setActif(true);employe.setRole(Role.ADMINISTRATEUR);
@@ -69,7 +73,14 @@ public class EmployeServiceImplTest {
 		l.info("Logging test ... ");
 		assertThat(employeServiceImpl.ajouterContrat(contrat)).isPositive();
 	}
-
+	
+	@Test
+	public void testAffecterContratAEmploye() {
+		//when(contratRepoistory.findById(contrat.getReference()).get()).thenReturn(new Contrat());
+		//when(employeRepository.findById(employe.getId()).get()).thenReturn(employe);
+		//verify(contratRepoistory).save(contrat);
+		when(contratRepoistory.save(contrat)).thenReturn(contrat);
+	}
 	
 	@Test
 	public void testGetEmployePrenomById() {
@@ -92,6 +103,11 @@ public class EmployeServiceImplTest {
 		employeServiceImpl.deleteContratById(contrat.getReference());
 		l.info("Logging test ... ");
 		verify(contratRepoistory).delete(contrat);
+	}
+	
+	@Test
+	public void testDeleteAllContratJPQL() {
+		verify(employeRepository).deleteAllContratJPQL();
 	}
 
 }
