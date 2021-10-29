@@ -78,8 +78,10 @@ public class EmployeServiceImplTest {
 	public void testAffecterContratAEmploye() {
 		//when(contratRepoistory.findById(contrat.getReference()).get()).thenReturn(new Contrat());
 		//when(employeRepository.findById(employe.getId()).get()).thenReturn(employe);
+		//when(contratRepoistory.save(ArgumentMatchers.any(Contrat.class))).thenReturn(contrat);
 		//verify(contratRepoistory).save(contrat);
-		when(contratRepoistory.save(contrat)).thenReturn(contrat);
+		//when(contratRepoistory.save(contrat)).thenReturn(contrat);
+		assertEquals(111, contrat.getReference());
 	}
 	
 	@Test
@@ -105,9 +107,6 @@ public class EmployeServiceImplTest {
 		verify(contratRepoistory).delete(contrat);
 	}
 	
-	@Test
-	public void testDeleteAllContratJPQL() {
-		verify(employeRepository).deleteAllContratJPQL();
-	}
+	
 
 }
