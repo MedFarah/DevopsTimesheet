@@ -104,7 +104,7 @@ public class IControllerEmployeImpl  {
 
 	
 	public float getSalaireByEmployeIdJPQL(int employeId) {
-		// TODO Auto-generated method stub
+		
 		return iemployeservice.getSalaireByEmployeIdJPQL(employeId);
 	}
 
