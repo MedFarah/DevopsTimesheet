@@ -8,7 +8,7 @@ pipeline {
         }
       stage('package'){
         steps {
-          sh "mvn package"
+          bat "mvn package"
               }
                       }
       }
