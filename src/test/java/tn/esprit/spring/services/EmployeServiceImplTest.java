@@ -13,6 +13,7 @@ import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.assertj.core.api.ObjectAssert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -55,7 +56,7 @@ public class EmployeServiceImplTest {
 		
 		when(employeRepository.save(ArgumentMatchers.any(Employe.class))).thenReturn(employe);
 		l.info("Logging test ... ");
-		assertThat(employeServiceImpl.ajouterEmploye(employe)).isPositive();
+		assertEquals(employeServiceImpl.ajouterEmploye(employe),employe);
 	}
 
 	@Test
