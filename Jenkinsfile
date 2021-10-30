@@ -6,12 +6,6 @@ pipeline {
                echo 'This is a minimal pipeline.' 
             }
         }
-      stage('build'){
-        steps {
-          bat "mvn package"
-              }
-           }
-
 	stage("build & SonarQube analysis") {
             agent any
             steps {
