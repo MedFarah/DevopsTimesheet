@@ -24,17 +24,18 @@ public class EmployeeTest {
 	@Autowired
 	EmployeRepository er;
 	
-	static final String nom = "BenMansour";
-	static final String prenom = "Ahmed";
-	static final String email = "hmedM@esprit.tn";
+	private static final String NAME = "BenMansour";
+	private static final String SURNAME = "Ahmed";
+	private static final String EMAIL = "hmedM@esprit.tn";
 
 	private static final Logger l = LogManager.getLogger(EmployeeTest.class);
 
 	@Test
 	public void verifTaille() {
 		List<Employe> employes = es.getAllEmployes();
-		assertTrue(employes.size() > 0);
-		l.info("Taille: " + employes.size());
+		assertTrue(!employes.isEmpty());
+		String s = "Taille: " + employes.size();
+		l.info(s);
 	}
 
 
@@ -44,11 +45,12 @@ public class EmployeeTest {
 
 		
 		Employe emp = new Employe();
-		emp.setNom(nom);
-		emp.setPrenom(prenom);
-		emp.setEmail(email);
+		emp.setNom(NAME);
+		emp.setPrenom(SURNAME);
+		emp.setEmail(EMAIL);
 		emp = es.ajouterEmploye(emp);
-		l.info("Nbr: " + es.getNombreEmployeJPQL());
+		String s = "Nbr" + es.getNombreEmployeJPQL();
+		l.info(s);
 		assertEquals(i + (long) 1, es.getNombreEmployeJPQL());
 		er.delete(emp);
 	}
@@ -56,9 +58,9 @@ public class EmployeeTest {
 	@Test
 	public void testModif() {
 		Employe emp = new Employe();
-		emp.setNom(nom);
-		emp.setPrenom(prenom);
-		emp.setEmail(email);
+		emp.setNom(NAME);
+		emp.setPrenom(SURNAME);
+		emp.setEmail(EMAIL);
 		emp = es.ajouterEmploye(emp);
 		emp.setPrenom("abbas");
 		emp = er.save(emp);
@@ -69,9 +71,9 @@ public class EmployeeTest {
 	@Test
 	public void testSuppr() {
 		Employe emp = new Employe();
-		emp.setNom(nom);
-		emp.setPrenom(prenom);
-		emp.setEmail(email);
+		emp.setNom(NAME);
+		emp.setPrenom(SURNAME);
+		emp.setEmail(EMAIL);
 		emp = es.ajouterEmploye(emp);
 		Integer i = es.getNombreEmployeJPQL();
 		er.delete(emp);
