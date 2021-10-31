@@ -20,7 +20,7 @@ pipeline {
 	bat 'mvn clean package -Dmaven.test.failure.ignore=true deploy:deploy-file -DgroupId=org.springframework.boot -DartifactId=spring-boot-starter-parent -Dversion=2.1.4.RELEASE -DgeneratePom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://localhost:8082/repository/maven-releases/ -Dfile=target/Timesheet-spring-boot-core-data-jpa-mvc-REST-1-0.0.1-SNAPSHOT.jar'
 	}
       }
-	  
+	  }
 	  post {
         always {
             echo 'This will always run'
@@ -40,5 +40,5 @@ pipeline {
             echo 'For example, if the Pipeline was previously failing but is now successful'
         }
 	}
-}
+
 }
