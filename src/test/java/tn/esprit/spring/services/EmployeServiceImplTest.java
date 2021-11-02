@@ -20,6 +20,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -29,7 +30,7 @@ import tn.esprit.spring.entities.Role;
 import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.EmployeRepository;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class EmployeServiceImplTest {
 
 	@Mock
@@ -39,24 +40,31 @@ public class EmployeServiceImplTest {
 	@InjectMocks
 	EmployeServiceImpl employeServiceImpl;
 	private static final Logger l = LogManager.getLogger(EmployeServiceImplTest.class);
-	
-	Employe employe ;Contrat contrat;
-	
+
+	Employe employe;
+	Contrat contrat;
+
 	@Before
-    public void setUp() throws Exception {
-		contrat = new Contrat(); contrat.setReference(111);contrat.setSalaire(12332F);
+	public void setUp() throws Exception {
+		contrat = new Contrat();
+		contrat.setReference(111);
+		contrat.setSalaire(12332F);
 		employe = new Employe();
 		employe.setId(7);
-		employe.setNom("Test"); employe.setPrenom("Ben Test"); employe.setEmail("test@test.com");employe.setActif(true);employe.setRole(Role.ADMINISTRATEUR);
-				
-    }
-	
+		employe.setNom("Test");
+		employe.setPrenom("Ben Test");
+		employe.setEmail("test@test.com");
+		employe.setActif(true);
+		employe.setRole(Role.ADMINISTRATEUR);
+
+	}
+
 	@Test
 	public void testAjouterEmploye() {
-		
+
 		when(employeRepository.save(ArgumentMatchers.any(Employe.class))).thenReturn(employe);
 		l.info("Logging test ... ");
-		assertEquals(employeServiceImpl.ajouterEmploye(employe),employe);
+		assertEquals(employeServiceImpl.ajouterEmploye(employe), employe);
 	}
 
 	@Test
@@ -70,33 +78,34 @@ public class EmployeServiceImplTest {
 
 	@Test
 	public void testAjouterContrat() {
+		l.info("Logging testAjouterContrat method ... ");
 		when(contratRepoistory.save(ArgumentMatchers.any(Contrat.class))).thenReturn(contrat);
-		l.info("Logging test ... ");
 		assertThat(employeServiceImpl.ajouterContrat(contrat)).isPositive();
 	}
-	
+
 	@Test
 	public void testAffecterContratAEmploye() {
-		//when(contratRepoistory.findById(contrat.getReference()).get()).thenReturn(new Contrat());
-		//when(employeRepository.findById(employe.getId()).get()).thenReturn(employe);
-		//when(contratRepoistory.save(ArgumentMatchers.any(Contrat.class))).thenReturn(contrat);
-		//verify(contratRepoistory).save(contrat);
-		//when(contratRepoistory.save(contrat)).thenReturn(contrat);
-		assertEquals(111, contrat.getReference());
+		l.info("Logging AffecterContratAEmploye method ... ");
+		when(contratRepoistory.findById(contrat.getReference())).thenReturn(Optional.of(contrat));
+		when(employeRepository.findById(contrat.getReference())).thenReturn(Optional.of(employe));
+		employeServiceImpl.affecterContratAEmploye(contrat.getReference(), employe.getId());
+		verify(contratRepoistory, Mockito.times(1)).save(contrat);
+		// when(contratRepoistory.save(contrat)).thenReturn(contrat);
+		// assertEquals(111, contrat.getReference());
 	}
-	
+
 	@Test
 	public void testGetEmployePrenomById() {
 		String prenom = "Ben Test";
 		when(employeRepository.findById(employe.getId())).thenReturn(Optional.of(employe));
 		l.info("Logging test ... ");
 		assertEquals(prenom, employeServiceImpl.getEmployePrenomById(employe.getId()));
-	
+
 	}
 
 	@Test
 	public void testDeleteEmployeById() {
-		//when(employeRepository.findById(employe.getId())).thenReturn(Optional.of(employe));
+		when(employeRepository.findById(employe.getId())).thenReturn(Optional.of(employe));
 		assertEquals(7, employe.getId());
 	}
 
@@ -104,10 +113,15 @@ public class EmployeServiceImplTest {
 	public void testDeleteContratById() {
 		when(contratRepoistory.findById(contrat.getReference())).thenReturn(Optional.of(contrat));
 		employeServiceImpl.deleteContratById(contrat.getReference());
-		l.info("Logging test ... ");
+		l.info("Delete contract By Id :  " + contrat.getReference());
 		verify(contratRepoistory).delete(contrat);
 	}
-	
-	
+
+	@Test
+	public void deleteAllContratJPQL() {
+		l.info("Logging deleteAllContratJPQL method ... ");
+		employeServiceImpl.deleteAllContratJPQL();
+		verify(employeRepository, Mockito.times(1)).deleteAllContratJPQL();
+	}
 
 }
