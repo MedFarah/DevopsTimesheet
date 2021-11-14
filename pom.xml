@@ -13,6 +13,9 @@
 	<artifactId>Timesheet-spring-boot-core-data-jpa-mvc-REST-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+	<build>
+        <finalName>Timesheet</finalName>
+        </build>
 	<name>Timesheet-spring-boot-core-data-jpa-mvc-REST-1</name>
 	<description>Timesheet-spring-boot-core-data-jpa-mvc-REST-1</description>
 
