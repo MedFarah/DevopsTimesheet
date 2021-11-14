@@ -6,7 +6,7 @@ pipeline {
 				agent any
 				steps {
 				  
-					bat 'mvn clean sonar:sonar'
+					bat 'mvn build sonar:sonar'
 					echo 'im here **********************************'
 				  
 				}
