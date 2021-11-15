@@ -6,7 +6,6 @@ pipeline {
 	}
     agent any  
     stages { 
-        
 		stage("build , Test & SonarQube analysis") {
 				agent any
 				steps {
