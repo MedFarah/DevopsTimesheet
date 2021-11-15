@@ -7,7 +7,6 @@ pipeline {
 				steps {
 				  
 					bat 'mvn compile sonar:sonar'
-					echo 'im here **********************************'
 				  
 				}
 			  }
