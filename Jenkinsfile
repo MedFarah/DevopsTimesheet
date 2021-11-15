@@ -12,7 +12,6 @@ pipeline {
 				steps {
 				  
 					bat 'mvn compile sonar:sonar'
-				  
 				}
 			  }
 		stage('Create artifact and Deploy it to nexus'){
