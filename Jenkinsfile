@@ -6,11 +6,13 @@ pipeline {
 	}
     agent any  
     stages { 
+        
 		stage("build , Test & SonarQube analysis") {
 				agent any
 				steps {
 				  
 					bat 'mvn compile sonar:sonar'
+				  
 				}
 			  }
 		stage('Create artifact and Deploy it to nexus'){
@@ -30,8 +32,9 @@ pipeline {
 		stage('Deploy our image') {
 			steps { 
 					script { 
-							withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
-							bat "docker push timesheet"
+							docker.withRegistry( '', registryCredential)
+							{	bat 'docker login -u mofarah7 -p mohamedfarah7722 docker.io'
+								bat'docker push timesheet'
 							} 
 						} 
 				}
