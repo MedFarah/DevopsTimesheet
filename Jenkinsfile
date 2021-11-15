@@ -24,7 +24,7 @@ pipeline {
 	    stage('Building our image') {
             steps { 
 					script { 
-							dockerImage= docker.build registry + ":$BUILD_NUMBER" 
+							dockerImage= docker.build registry  
 							}
 				  }
 			}
@@ -32,7 +32,10 @@ pipeline {
 		stage('Deploy our image') {
 			steps { 
 					script { 
-							docker.withRegistry( '', registryCredential) { dockerImage.push() } 
+							docker.withRegistry( '', registryCredential)
+							{	bat 'docker login -u mofarah7 -p mohamedfarah77722' 
+								bat'docker push timesheet'
+							} 
 						} 
 				}
 			}
