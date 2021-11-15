@@ -32,9 +32,8 @@ pipeline {
 		stage('Deploy our image') {
 			steps { 
 					script { 
-							docker.withRegistry( '', registryCredential)
-							{	bat 'docker login -u mofarah7 -p mohamedfarah7722' 
-								bat'docker push timesheet'
+							withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
+							bat "docker push timesheet"
 							} 
 						} 
 				}
