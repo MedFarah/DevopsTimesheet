@@ -1,6 +1,6 @@
 pipeline { 
 	environment {
-		registry = "timesheet"
+		registry = "mofarah7/timesheet"
 		registryCredential= 'dockerHub'
 		dockerImage = ''
 	}
@@ -30,14 +30,7 @@ pipeline {
 			}
 			
 		stage('Deploy our image') {
-			steps { 
-					script { 
-							docker.withRegistry( '', registryCredential)
-							{	bat 'docker login -u mofarah7 -p mohamedfarah7722 docker.io'
-								bat'docker push timesheet'
-							} 
-						} 
-				}
+			steps { script { docker.withRegistry( '', registryCredential) { dockerImage.push() } } }
 			}
 			
 	  }
