@@ -1,6 +1,6 @@
 pipeline { 
 	environment {
-		registry = "dokcertimesheetPipeline"
+		registry = "dokcertimesheetPipelineTest"
 		registryCredential= 'dockerHub'
 		dockerImage = ''
 	}
@@ -23,7 +23,9 @@ pipeline {
 			  
 	    stage('Building our image') {
             steps { 
-					script { dockerImage= docker.build registry + ":$BUILD_NUMBER" }
+					script { 
+					dockerImage= docker.build registry + ":$BUILD_NUMBER" 
+							}
 				  }
 			}
 			
