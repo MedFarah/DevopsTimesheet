@@ -20,7 +20,7 @@ pipeline {
 				agent any
 				steps {
 				  
-					bat 'mvn sonar:sonar'
+					bat 'mvn compile sonar:sonar'
 				  
 				}
 			  }
