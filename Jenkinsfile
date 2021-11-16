@@ -38,8 +38,11 @@ pipeline {
 				  }
 			}
 			
-		stage('Deploy docker image') {
-			steps { script { docker.withRegistry( '', registryCredential) { dockerImage.push() } } }
+		stage('container orchestration docker compose ') {
+			steps { 
+					bat 'cd C:\Users\ASUS\Downloads'
+					bat 'docker-compose up'
+				}
 			}
 			
 	  }
