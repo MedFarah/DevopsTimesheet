@@ -41,7 +41,7 @@ pipeline {
 		stage('container orchestration docker compose ') {
 			steps { 
 					bat 'docker-compose build'
-					bat 'docker-compose up'
+					bat 'docker-compose up -d'
 				}
 			}
 			
@@ -51,7 +51,7 @@ pipeline {
             echo 'Post jenkins file execution'
         }
         success {
-            mail bcc: '', body: "<b>Details:</b><br>\n<br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: 'mohamed.farah1@esprit', mimeType: 'text/html', replyTo: '', subject: "SUCCESS : Project name -> ${env.JOB_NAME}", to: "mohamed.farah1@esprit.tn";
+            mail bcc: '', body: "<b>Details:</b><br>\n<br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL} <br> Mysql and Spring boot containers link : http://localhost:8081/SpringMVC/servlet/getAllEmployeNamesJPQL", cc: '', charset: 'UTF-8', from: 'mohamed.farah1@esprit', mimeType: 'text/html', replyTo: '', subject: "SUCCESS : Project name -> ${env.JOB_NAME}", to: "mohamed.farah1@esprit.tn";
 
         }
         failure {
