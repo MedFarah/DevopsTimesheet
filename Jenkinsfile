@@ -40,7 +40,7 @@ pipeline {
 			
 		stage('container orchestration docker compose ') {
 			steps { 
-					bat 'cd C:\Users\ASUS\Downloads'
+					bat 'cd C:/Users/ASUS/Downloads'
 					bat 'docker-compose up'
 				}
 			}
