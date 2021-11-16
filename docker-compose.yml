@@ -24,5 +24,5 @@ services:
       SPRING_DATASOURCE_USERNAME: test
       SPRING_DATASOURCE_PASSWORD: test
     depends_on:
-       - mysql-standalone:
+       - mysql-standalone=
                             condition: service_healthy
