@@ -1,0 +1,144 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --< tn.esprit.spring:Timesheet-spring-boot-core-data-jpa-mvc-REST-1 >---
+[INFO] Building Timesheet-spring-boot-core-data-jpa-mvc-REST-1 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ Timesheet-spring-boot-core-data-jpa-mvc-REST-1 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ Timesheet-spring-boot-core-data-jpa-mvc-REST-1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ Timesheet-spring-boot-core-data-jpa-mvc-REST-1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 29 source files to C:\Users\Chadi\Desktop\5SAE6\DEVOPS\Timesheet\DevopsTimesheet\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ Timesheet-spring-boot-core-data-jpa-mvc-REST-1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Chadi\Desktop\5SAE6\DEVOPS\Timesheet\DevopsTimesheet\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ Timesheet-spring-boot-core-data-jpa-mvc-REST-1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Users\Chadi\Desktop\5SAE6\DEVOPS\Timesheet\DevopsTimesheet\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ Timesheet-spring-boot-core-data-jpa-mvc-REST-1 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running tn.esprit.spring.services.EmployeServiceImplTest
+01:21:10.112 [main] INFO tn.esprit.spring.services.EmployeServiceImplTest - Logging test ... 
+01:21:10.186 [main] INFO tn.esprit.spring.services.EmployeServiceImplTest - Logging test ... 
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.002 s - in tn.esprit.spring.services.EmployeServiceImplTest
+[INFO] Running tn.esprit.spring.services.EntrepriseServiceImplTest
+01:21:10.229 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.233 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+01:21:10.244 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+01:21:10.263 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [tn.esprit.spring.services.EntrepriseServiceImplTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+01:21:10.277 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [tn.esprit.spring.services.EntrepriseServiceImplTest], using SpringBootContextLoader
+01:21:10.280 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [tn.esprit.spring.services.EntrepriseServiceImplTest]: class path resource [tn/esprit/spring/services/EntrepriseServiceImplTest-context.xml] does not exist
+01:21:10.281 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [tn.esprit.spring.services.EntrepriseServiceImplTest]: class path resource [tn/esprit/spring/services/EntrepriseServiceImplTestContext.groovy] does not exist
+01:21:10.281 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [tn.esprit.spring.services.EntrepriseServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+01:21:10.282 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.spring.services.EntrepriseServiceImplTest]: EntrepriseServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:21:10.320 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.414 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Chadi\Desktop\5SAE6\DEVOPS\Timesheet\DevopsTimesheet\target\classes\tn\esprit\spring\TimesheetSpringBootCoreDataJpaMvcRest1Application.class]
+01:21:10.415 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application for test class tn.esprit.spring.services.EntrepriseServiceImplTest
+01:21:10.532 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [tn.esprit.spring.services.EntrepriseServiceImplTest]: using defaults.
+01:21:10.532 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+01:21:10.553 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@22d9c961, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@736f3e9e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@bdc8014, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1f443fae, org.springframework.test.context.support.DirtiesContextTestExecutionListener@73ba6fe6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@79ab34c1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1698d7c0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@281f23f2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@87abc48, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@28d79cba, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@782168b7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29f0c4f2]
+01:21:10.556 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.557 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.558 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.558 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.558 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.558 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.565 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6b68cb27 testClass = EntrepriseServiceImplTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@675ffd1d testClass = EntrepriseServiceImplTest, locations = '{}', classes = '{class tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@350b3a17, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@721eb7df, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3e681bc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@584f5497], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+01:21:10.566 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.566 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [tn.esprit.spring.services.EntrepriseServiceImplTest]
+01:21:10.592 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2021-10-31 01:21:10.973  INFO 13164 --- [           main] t.e.s.s.EntrepriseServiceImplTest        : Starting EntrepriseServiceImplTest on DESKTOP-VUS1FQD with PID 13164 (started by Chadi in C:\Users\Chadi\Desktop\5SAE6\DEVOPS\Timesheet\DevopsTimesheet)
+2021-10-31 01:21:10.975  INFO 13164 --- [           main] t.e.s.s.EntrepriseServiceImplTest        : No active profile set, falling back to default profiles: default
+2021-10-31 01:21:11.882  INFO 13164 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-10-31 01:21:11.987  INFO 13164 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95ms. Found 6 repository interfaces.
+2021-10-31 01:21:12.525  INFO 13164 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$45ae32a2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-31 01:21:12.798  INFO 13164 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-31 01:21:13.019  INFO 13164 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-31 01:21:13.119  INFO 13164 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-10-31 01:21:13.214  INFO 13164 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-10-31 01:21:13.217  INFO 13164 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-10-31 01:21:13.284  INFO 13164 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-10-31 01:21:13.790  INFO 13164 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Hibernate: alter table contrat add constraint FKidi9k1fvw6mma24yqoe2kmtju foreign key (employe_id) references employe (id)
+Hibernate: alter table departement add constraint FKkg0jmw8ih55tnlfet3ucbkfsy foreign key (entreprise_id) references entreprise (id)
+Hibernate: alter table departement_employes add constraint FKp688tcln21xhsg34l5ltk164s foreign key (employes_id) references employe (id)
+Hibernate: alter table departement_employes add constraint FK1lnr2unyxtqxd0olwlepjt0gp foreign key (departements_id) references departement (id)
+Hibernate: alter table mission add constraint FKso6moxdlog3powkcqulmtfg1s foreign key (departement_id) references departement (id)
+Hibernate: alter table timesheet add constraint FK2skc3sqdd7v35jgqrdfimuqxr foreign key (id_employe) references employe (id)
+Hibernate: alter table timesheet add constraint FKbauiu1nsna8neie2d892t99vq foreign key (id_mission) references mission (id)
+2021-10-31 01:21:14.656  INFO 13164 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-31 01:21:15.032  INFO 13164 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-10-31 01:21:16.277  INFO 13164 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-31 01:21:16.352  WARN 13164 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-31 01:21:16.853  INFO 13164 --- [           main] t.e.s.s.EntrepriseServiceImplTest        : Started EntrepriseServiceImplTest in 6.252 seconds (JVM running for 8.091)
+Hibernate: insert into entreprise (name, raison_social) values (?, ?)
+Hibernate: select entreprise0_.id as id1_4_0_, entreprise0_.name as name2_4_0_, entreprise0_.raison_social as raison_s3_4_0_, departemen1_.entreprise_id as entrepri3_1_1_, departemen1_.id as id1_1_1_, departemen1_.id as id1_1_2_, departemen1_.entreprise_id as entrepri3_1_2_, departemen1_.name as name2_1_2_ from entreprise entreprise0_ left outer join departement departemen1_ on entreprise0_.id=departemen1_.entreprise_id where entreprise0_.id=?
+Hibernate: delete from entreprise where id=?
+Hibernate: select entreprise0_.id as id1_4_0_, entreprise0_.name as name2_4_0_, entreprise0_.raison_social as raison_s3_4_0_, departemen1_.entreprise_id as entrepri3_1_1_, departemen1_.id as id1_1_1_, departemen1_.id as id1_1_2_, departemen1_.entreprise_id as entrepri3_1_2_, departemen1_.name as name2_1_2_ from entreprise entreprise0_ left outer join departement departemen1_ on entreprise0_.id=departemen1_.entreprise_id where entreprise0_.id=?
+2021-10-31 01:21:17.024  INFO 13164 --- [           main] t.e.s.s.EntrepriseServiceImplTest        :  entreprise : name0
+Hibernate: insert into entreprise (name, raison_social) values (?, ?)
+Hibernate: select entreprise0_.id as id1_4_0_, entreprise0_.name as name2_4_0_, entreprise0_.raison_social as raison_s3_4_0_, departemen1_.entreprise_id as entrepri3_1_1_, departemen1_.id as id1_1_1_, departemen1_.id as id1_1_2_, departemen1_.entreprise_id as entrepri3_1_2_, departemen1_.name as name2_1_2_ from entreprise entreprise0_ left outer join departement departemen1_ on entreprise0_.id=departemen1_.entreprise_id where entreprise0_.id=?
+Hibernate: delete from entreprise where id=?
+Hibernate: select entreprise0_.id as id1_4_0_, entreprise0_.name as name2_4_0_, entreprise0_.raison_social as raison_s3_4_0_, departemen1_.entreprise_id as entrepri3_1_1_, departemen1_.id as id1_1_1_, departemen1_.id as id1_1_2_, departemen1_.entreprise_id as entrepri3_1_2_, departemen1_.name as name2_1_2_ from entreprise entreprise0_ left outer join departement departemen1_ on entreprise0_.id=departemen1_.entreprise_id where entreprise0_.id=?
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.839 s - in tn.esprit.spring.services.EntrepriseServiceImplTest
+2021-10-31 01:21:17.069  INFO 13164 --- [       Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-10-31 01:21:17.072  INFO 13164 --- [       Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-31 01:21:17.076  INFO 13164 --- [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-31 01:21:17.084  INFO 13164 --- [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ Timesheet-spring-boot-core-data-jpa-mvc-REST-1 ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [Timesheet-spring-boot-core-data-jpa-mvc-REST-1] in [C:\Users\Chadi\Desktop\5SAE6\DEVOPS\Timesheet\DevopsTimesheet\target\Timesheet-spring-boot-core-data-jpa-mvc-REST-1-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [C:\Users\Chadi\Desktop\5SAE6\DEVOPS\Timesheet\DevopsTimesheet\src\main\webapp]
+[INFO] Webapp assembled in [408 msecs]
+[INFO] Building war: C:\Users\Chadi\Desktop\5SAE6\DEVOPS\Timesheet\DevopsTimesheet\target\Timesheet-spring-boot-core-data-jpa-mvc-REST-1-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.4.RELEASE:repackage (repackage) @ Timesheet-spring-boot-core-data-jpa-mvc-REST-1 ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --< tn.esprit.spring:Timesheet-spring-boot-core-data-jpa-mvc-REST-1 >---
+[INFO] Building Timesheet-spring-boot-core-data-jpa-mvc-REST-1 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy-file (default-cli) @ Timesheet-spring-boot-core-data-jpa-mvc-REST-1 ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.799 s
+[INFO] Finished at: 2021-10-31T01:21:20+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy-file (default-cli) on project Timesheet-spring-boot-core-data-jpa-mvc-REST-1: C:\Users\Chadi\Desktop\5SAE6\DEVOPS\Timesheet\DevopsTimesheet\target\spring-boot-starter-parent-2.1.4.RELEASE.jar not found. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
