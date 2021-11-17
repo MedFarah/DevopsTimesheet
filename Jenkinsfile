@@ -38,9 +38,8 @@ pipeline {
 				  }
 			}
 			
-		stage('container orchestration docker compose ') {
+		stage('containers orchestration docker compose ') {
 			steps { 
-					bat 'docker-compose build'
 					bat 'docker-compose up -d'
 				}
 			}
