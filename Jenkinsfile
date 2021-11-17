@@ -33,6 +33,9 @@ pipeline {
 		stage(' get artifact from nexus'){
 			steps {
 					bat 'curl -u admin:admin -o myapp.jar "http://localhost:8082/repository/maven-releases/org/springframework/boot/spring-boot-starter-parent/2.1.4.RELEASE/spring-boot-starter-parent-2.1.4.RELEASE.jar" -L'
+					bat 'git add myapp.jar'
+					bat 'git commit -m "add from jenkins"'
+					bat 'git push origin MedFarahBranch'
 			}
 			  }
 			  
