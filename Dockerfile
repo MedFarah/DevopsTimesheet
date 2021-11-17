@@ -1,7 +1,4 @@
-FROM openjdk:8-jre-alpine
-ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \JAVA_OPTS=""
-Set the working directory to /app
-WORKDIR /app
-ADD target/*.jar app.jar
-EXPOSE 8080
-CMD ["java", "-jar", "/app/app.jar"]
+FROM openjdk:8-jdk-alpine
+EXPOSE 8083
+ADD target/Timesheet-spring-boot-core-data-jpa-mvc-REST-1-1.0.war Timesheet-spring-boot-core-data-jpa-mvc-REST-1-1.0.war
+ENTRYPOINT ["java","-jar","Timesheet-spring-boot-core-data-jpa-mvc-REST-1-1.0.war"]
